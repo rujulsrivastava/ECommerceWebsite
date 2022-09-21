@@ -9,6 +9,9 @@ Login Details For User :
 Username : megha.maitin@gmail.com
 Password : Test@123
 
+Username: ebajaj@gmail.com
+Password : Test@12345
+
 For Admin :
 User Name : admin
-Password : Test@123 //new pwd = admin@123
+Password : admin@123
