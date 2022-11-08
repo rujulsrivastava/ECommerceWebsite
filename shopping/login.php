@@ -158,7 +158,7 @@ error:function (){}
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
+				<li><a href="">Home</a></li>
 				<li class='active'>Authentication</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
@@ -188,7 +188,9 @@ echo htmlentities($_SESSION['errmsg']="");
 		</div>
 	  	<div class="form-group">
 		    <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
-		 <input type="password" name="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" >
+		 <input type="password" name="password" class="form-control 
+		 unicase-form-control
+		  text-input" id="exampleInputPassword1" >
 		</div>
 		<div class="radio outer-xs">
 		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
@@ -205,7 +207,8 @@ echo htmlentities($_SESSION['errmsg']="");
 	<form class="register-form outer-top-xs" role="form" method="post" name="register" onSubmit="return valid();">
 <div class="form-group">
 	    	<label class="info-title" for="fullname">Full Name <span>*</span></label>
-	    	<input type="text" class="form-control unicase-form-control text-input" id="fullname" name="fullname" required="required">
+	    	<input type="text" class="form-control
+			 text-input" id="fullname" name="fullname" required="required">
 	  	</div>
 
 
