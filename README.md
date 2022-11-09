@@ -15,4 +15,4 @@ Password : Test@123
 
 For Admin :
 User Name : admin
-Password : Test@123
+Password : admin@123
