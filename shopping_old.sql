@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 01:22 PM
+-- Generation Time: Sep 21, 2022 at 08:39 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'admin', 'e6e061838856bf47e1de730719fb2609', '2022-08-20 16:21:18', '22-08-2022 03:14:59 PM');
+(1, 'admin', 'e6e061838856bf47e1de730719fb2609', '2017-01-24 16:21:18', '22-08-2022 03:14:59 PM');
 
 -- --------------------------------------------------------
 
@@ -61,10 +61,10 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDate`, `updationDate`) VALUES
-(3, 'Books', 'Test anuj', '2022-08-20 19:17:37', '22-08-2022 03:17:24 PM'),
-(4, 'Electronics', 'Electronic Products', '2022-08-24 19:19:32', ''),
-(5, 'Furniture', 'test', '2022-08-24 19:19:54', ''),
-(6, 'Fashion', 'Fashion', '2022-08-20 19:18:52', ''),
+(3, 'Books', 'Test anuj', '2017-01-24 19:17:37', '22-08-2022 03:17:24 PM'),
+(4, 'Electronics', 'Electronic Products', '2017-01-24 19:19:32', ''),
+(5, 'Furniture', 'test', '2017-01-24 19:19:54', ''),
+(6, 'Fashion', 'Fashion', '2017-02-20 19:18:52', ''),
 (7, 'Shoes', 'footwear', '2022-08-22 09:47:00', NULL);
 
 -- --------------------------------------------------------
@@ -88,11 +88,11 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `userId`, `productId`, `quantity`, `orderDate`, `paymentMethod`, `orderStatus`) VALUES
-(1, 1, '3', 1, '2022-09-01 19:32:57', 'COD', NULL),
-(3, 1, '4', 1, '2022-09-01 19:43:04', 'Debit / Credit card', 'Delivered'),
-(4, 1, '17', 1, '2022-09-02 16:14:17', 'COD', 'in Process'),
-(5, 1, '3', 1, '2022-09-02 19:21:38', 'COD', NULL),
-(6, 1, '4', 1, '2022-09-03 19:21:38', 'COD', NULL);
+(1, 1, '3', 1, '2017-03-07 19:32:57', 'COD', NULL),
+(3, 1, '4', 1, '2017-03-10 19:43:04', 'Debit / Credit card', 'Delivered'),
+(4, 1, '17', 1, '2017-03-08 16:14:17', 'COD', 'in Process'),
+(5, 1, '3', 1, '2017-03-08 19:21:38', 'COD', NULL),
+(6, 1, '4', 1, '2017-03-08 19:21:38', 'COD', NULL);
 
 -- --------------------------------------------------------
 
@@ -113,11 +113,10 @@ CREATE TABLE `ordertrackhistory` (
 --
 
 INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDate`) VALUES
-(1, 3, 'in Process', 'Order has been Shipped.', '2022-09-09 19:36:45'),
-(2, 1, 'Delivered', 'Order Has been delivered', '2022-09-10 19:37:31'),
-(3, 3, 'Delivered', 'Product delivered successfully', '2022-09-10 19:43:04'),
-(4, 4, 'in Process', 'Product ready for Shipping', '2022-09-11 19:50:36'),
-(5, 3, 'Delivered', 'Product delivered successfully', '2022-09-10 19:43:04');
+(1, 3, 'in Process', 'Order has been Shipped.', '2017-03-10 19:36:45'),
+(2, 1, 'Delivered', 'Order Has been delivered', '2017-03-10 19:37:31'),
+(3, 3, 'Delivered', 'Product delivered successfully', '2017-03-10 19:43:04'),
+(4, 4, 'in Process', 'Product ready for Shipping', '2017-03-10 19:50:36');
 
 -- --------------------------------------------------------
 
@@ -142,9 +141,9 @@ CREATE TABLE `productreviews` (
 --
 
 INSERT INTO `productreviews` (`id`, `productId`, `quality`, `price`, `value`, `name`, `summary`, `review`, `reviewDate`) VALUES
-(2, 3, 4, 5, 5, 'Anuj Kumar', 'BEST PRODUCT FOR ME :)', 'BEST PRODUCT FOR ME :)', '2022-08-26 20:43:57'),
-(3, 3, 3, 4, 3, 'Sarita pandey', 'Nice Product', 'Value for money', '2022-08-26 20:52:46'),
-(4, 3, 3, 4, 3, 'Sarita pandey', 'Nice Product', 'Value for money', '2022-08-26 20:59:19');
+(2, 3, 4, 5, 5, 'Anuj Kumar', 'BEST PRODUCT FOR ME :)', 'BEST PRODUCT FOR ME :)', '2017-02-26 20:43:57'),
+(3, 3, 3, 4, 3, 'Sarita pandey', 'Nice Product', 'Value for money', '2017-02-26 20:52:46'),
+(4, 3, 3, 4, 3, 'Sarita pandey', 'Nice Product', 'Value for money', '2017-02-26 20:59:19');
 
 -- --------------------------------------------------------
 
@@ -246,6 +245,28 @@ CREATE TABLE `userlog` (
 --
 
 INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `status`) VALUES
+(1, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 11:18:50', '', 1),
+(2, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 11:29:33', '', 1),
+(3, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 11:30:11', '', 1),
+(4, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 15:00:23', '26-02-2017 11:12:06 PM', 1),
+(5, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 18:08:58', '', 0),
+(6, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 18:09:41', '', 0),
+(7, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 18:10:04', '', 0),
+(8, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 18:10:31', '', 0),
+(9, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-26 18:13:43', '', 1),
+(10, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-27 18:52:58', '', 0),
+(11, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-02-27 18:53:07', '', 1),
+(12, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-03 18:00:09', '', 0),
+(13, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-03 18:00:15', '', 1),
+(14, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-06 18:10:26', '', 1),
+(15, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-07 12:28:16', '', 1),
+(16, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-07 18:43:27', '', 1),
+(17, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-07 18:55:33', '', 1),
+(18, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-07 19:44:29', '', 1),
+(19, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-08 19:21:15', '', 1),
+(20, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-15 17:19:38', '', 1),
+(21, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-15 17:20:36', '15-03-2017 10:50:39 PM', 1),
+(22, 'anuj.lpu1@gmail.com', 0x3a3a3100000000000000000000000000, '2017-03-16 01:13:57', '', 1),
 (23, 'hgfhgf@gmass.com', 0x3a3a3100000000000000000000000000, '2018-04-29 09:30:40', '', 1);
 
 -- --------------------------------------------------------
@@ -279,10 +300,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `shippingAddress`, `shippingState`, `shippingCity`, `shippingPincode`, `billingAddress`, `billingState`, `billingCity`, `billingPincode`, `regDate`, `updationDate`) VALUES
 (1, 'Megha Maitin', 'megha.maitin@gmail.com', 9009857868, 'f925916e2754e5e03f75dd58a5733251', 'Road1 Dhanbad', 'Ranchi', 'Dhanbad', 110001, 'Dhanbad', 'Ranchi', 'Dhanbad', 110092, '2017-02-04 19:30:50', ''),
 (2, 'Eshan', 'ebajaj@gmail.com', 8285703355, '5c428d8875d2948607f3e3fe134d71b4', '', '', '', 0, '', '', '', 0, '2017-03-15 17:21:22', ''),
-(3, 'hg', 'hgfhgf@gmass.com', 1121312312, '827ccb0eea8a706c4c34a16891f84e7b', '', '', '', 0, '', '', '', 0, '2018-04-29 09:30:32', ''),
-(4, '3456789', 'qwerty@gmail.com', 123456789, 'b1dca10d04928d6d6047575ec59b4c07', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-09-24 13:29:36', NULL),
-(5, '3456789', 'qwerty@gtail.com', 123456789, '25f9e794323b453885f5181f1b624d0b', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-09-24 13:31:18', NULL),
-(6, 'ijikl', 'qwerty@gail.com', 1234567878, 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-09-24 14:08:42', NULL);
+(3, 'hg', 'hgfhgf@gmass.com', 1121312312, '827ccb0eea8a706c4c34a16891f84e7b', '', '', '', 0, '', '', '', 0, '2018-04-29 09:30:32', '');
 
 -- --------------------------------------------------------
 
@@ -394,7 +412,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `ordertrackhistory`
 --
 ALTER TABLE `ordertrackhistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `productreviews`
@@ -424,7 +442,7 @@ ALTER TABLE `userlog`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
